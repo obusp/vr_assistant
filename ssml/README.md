@@ -1,4 +1,4 @@
-#json to Speech Synthesis Markup Language
+# json to Speech Synthesis Markup Language
 
 This basic script converts a json file with a hypothetical e-mail list to Speech Synthesis Markup Language (SSML), for a
 hands-free situation where a virtual assistant is needed to read your email inbox. 
