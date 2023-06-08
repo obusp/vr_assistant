@@ -4,6 +4,8 @@ import xml.etree.cElementTree as ET
 def init ():
     global index, sender, subject, summary
 
+
+    # load json file
     df = pd.read_json (r'Email_JSON.json')
     index    = range(df.index.size)
     sender   = df.sender
@@ -69,9 +71,11 @@ def root_att():
 
 
 def build_xml ():
+
+    # Voice and sound
     root   = ET.Element("speak", root_att())
     child  = ET.SubElement(root, "voice")
-    child.set("name", "en-US-ChristopherNeural")
+    child.set("name", "en-US-ChristopherNeural")    
     for i in index:
         sentence  = ET.SubElement(child, "s")
         sentence.text = (data_set(i))
